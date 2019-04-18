@@ -1,97 +1,292 @@
 <!DOCTYPE html>
-<html lang="en">   <!--dir="ltr">-->
+<html lang="en">
+<!--dir="ltr">-->
 
 <head>
   <!--<link rel="stylesheet" href="styles.css">-->
   <meta charset="utf-8">
   <!-- Meta tag necessaire pour adapter a mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Meta tag pour librairie Bootstrap-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Meta tag pour librairie Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <title>Puffism</title>
   <link rel="icon" href="img/puffism_logo.png">
 </head>
 
 <body style="background-color:rgb(114, 198, 236);">
-
+  <!--
   <div class="container">
-      <h1>Puffism</h1>
-      <p>The best way to discover, have fun</p>
+    <h1>Puffism</h1>
+    <p>The best way to discover, have fun</p>
   </div>
-  <!--<img src="img/puffism_logo.png" width="150px" height="150px" text-align="left">-->
-
-  <!--<h4 style = "text-align: right;"><button>Sign In</button></h4>
-
-  <div class="container">
-      
-      <h3 style="text-align:center">
-        <a href="https://www.youtube.com/">Home</a> Activities Services About Contact</h3>        
-  </div>-->
-
+  -->
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Activities</a>
-          </li>
+    <a class="navbar-brand" href="index.html">
+      <h2>Puffism</h2>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Services</a>
-          </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-          <li class="nav-item active">
-            <a class="nav-link" href="#">About</a>
-          </li>
+      <ul class="navbar-nav mr-auto">
 
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
+        <li class="nav-item active">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Activities</a>
+        </li>
 
-          <li class="nav-item active">
-              <a class="nav-link" href="join.html">Join</a>
-            </li>
-            
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Login</a>
-              </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="join.html">Join</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+
+    </div>
+
+  </nav>
+
 
   <hr>
-  <br>
 
-  <button>
-    <a href="https://www.youtube.com/">Youtube</a>
-  </button>
+  <div class="container">
 
-  <br>
 
-  <p>working hard</p>
-  
-  <br>
-  <p id="p01">I am different</p>
-  <p class="error"> Testing the class</p>
-  <img src="img/puffism_logo.png" width="600px" height="600px" class="rounded mx-auto d-block">
+    <div class="container mx-auto">
+      <div class="row">
 
-<!--Optionnel JavaScript-->
-<!--Ces scripts sont necessaire pour ajouter jQuery, Popper.js et JavaScript a bootstrap-->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <div class="card bg-light">
+          <div class="col">
+            <img src="img/puffism_logo.png" width="300px" class="rounded mx-auto d-block">
+          </div>
+        </div>
+
+        <div class="card bg-light">
+          <div class="card-header">Services and activities are currently unavailable</div>
+          <!--<<TO REMOVE-->
+          <div class="card-body">
+            <h3 class="card-title">Welcome to Puffism!</h3>
+            <p5 class="card-text">We are building a platform so that tourists and
+              guides alike can meet, exchange, discover and have fun!</p5>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+      <div class="row">
+        <div class="card bg-dark text-white mx-auto" style="max-width: 800px">
+          <img class="card-img" src="img/louvre.jpg" alt="Card image">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Today's featured attraction: Louvre</h5>
+            <p class="card-text"></p>
+            <p class="card-text">Last updated 3 mins ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="card-deck">
+
+      <div class="card mb-3">
+        <img class="card-img-top" src="img/toureiffel.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Tour Eiffel</h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <img class="card-img-top" src="img/miamibeach.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Miami Beach</h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <img class="card-img-top" src="img/1 (9).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-deck">
+
+      <div class="card mb-3">
+        <img class="card-img-top" src="img/notredame.jpeg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Notre Dame de Paris</h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <img class="card-img-top" src="img/nycstockexchange.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">New York Stock Exchange</h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <img class="card-img-top" src="img/arcdetriomphe.jpeg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Arc de Triomphe</h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-deck">
+
+      <div class="card mb-3">
+        <img class="card-img-top" src="img/akihabara.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Akihabara</h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <img class="card-img-top" src="img/1 (22).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <img class="card-img-top" src="img/1 (15).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-deck">
+
+      <div class="card mb-3">
+        <img class="card-img-top" src="img/1 (26).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <img class="card-img-top" src="img/1 (11).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <img class="card-img-top" src="img/1 (20).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+    </div>
+
+    <!--
+    <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="img/louvre.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="img/louvre.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="img/louvre.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+-->
+
+    <hr>
+
+
+  </div>
+  <!--Optionnel JavaScript-->
+  <!--Ces scripts sont necessaire pour ajouter jQuery, Popper.js et JavaScript a bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>
@@ -149,4 +344,4 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
-    </nav>-->  
+    </nav>-->
