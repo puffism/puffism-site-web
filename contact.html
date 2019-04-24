@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--dir="ltr">-->
+<html lang="en" dir="ltr">
 
 <head>
   <!--<link rel="stylesheet" href="styles.css">-->
@@ -21,13 +20,10 @@
 
 <body style="background-color:rgb(114, 198, 236);">
 
-  <!--<div class="container">
-    <h1>Enter Puffin mode!</h1>
-    <p>The best way to discover, have fun</p>
-  </div>-->
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.html"><h2>Puffism</h2></a>
+    <a class="navbar-brand" href="index.html">
+      <h2>Puffism</h2>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -39,11 +35,11 @@
           <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Activities</a>
+          <a class="nav-link" href="activities.html">Activities</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="services.html">Services</a>
         </li>
 
         <li class="nav-item">
@@ -51,7 +47,7 @@
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link active" href="contact.html">Contact</a>
         </li>
 
         <li class="nav-item">
@@ -81,40 +77,42 @@
       <img src="img/puffism_logo.png" width="200px" height="200px" class="rounded mx-auto d-block">
 
       <br>
-      <div class="input-group mb-3 col-8 mx-auto d-block">
-        <div class="form-group">
-          <label for="exampleFormControlInput1">First name</label>
-          <input type="First name" class="form-control" id="exampleFormControlInput1" placeholder="John">
+      <form class="px-6 py-2">
+        <div class="input-group mb-3 col-8 mx-auto d-block">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">First name</label>
+            <input type="First name" class="form-control" id="exampleFormControlInput1" placeholder="John">
+          </div>
         </div>
-      </div>
 
-      <div class="input-group mb-3 col-8 mx-auto d-block">
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Last name</label>
-          <input type="Last name" class="form-control" id="exampleFormControlInput1" placeholder="Doe">
+        <div class="input-group mb-3 col-8 mx-auto d-block">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Last name</label>
+            <input type="Last name" class="form-control" id="exampleFormControlInput1" placeholder="Doe">
+          </div>
         </div>
-      </div>
 
-      <div class="input-group mb-3 col-8 mx-auto d-block">
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="johndoe@example.com">
+        <div class="input-group mb-3 col-8 mx-auto d-block">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="johndoe@example.com">
+          </div>
         </div>
-      </div>
-      <div class="input-group mb-3 col-8 mx-auto d-block">
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Message</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <div class="input-group mb-3 col-8 mx-auto d-block">
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
         </div>
-      </div>
-      <br>
+        <br>
 
-      <div class="text-center">
-        <form action="/action_page.php">
-          <button class="btn btn-primary" type="submit"> Send Message </button>
-        </form>
-      </div>
-      <!--<button class="btn btn-primary" type="submit">Submit form</button>-->
+        <div class="text-center">
+          <form action="/action_page.php">
+            <button class="btn btn-primary" type="submit"> Send Message </button>
+          </form>
+        </div>
+
+      </form>
     </div>
   </div>
 
