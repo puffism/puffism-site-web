@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.54;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Symbol_98_1" data-name="Symbol 98 – 1" transform="translate(-64 -455.5)">
+    <g id="ic_search_" data-name="ic_search " class="cls-1" transform="translate(64 455.5)">
+      <rect id="square" class="cls-2" width="48" height="48" transform="translate(0 0)"/>
+      <path id="path" d="M64.043,76.786h-1.9l-.711-.711a14.843,14.843,0,0,0,3.794-9.96A15.414,15.414,0,1,0,49.814,81.528a14.843,14.843,0,0,0,9.96-3.794l.711.711v1.9L72.343,92.2,75.9,88.643Zm-14.229,0A10.671,10.671,0,1,1,60.486,66.114,10.627,10.627,0,0,1,49.814,76.786Z" transform="translate(-31.4 -47.7)"/>
+    </g>
+  </g>
+</svg>
