@@ -31,6 +31,25 @@ while ($donnees = $rep->fetch())
 
 }
 
+$rep_2 = $bdd->query('SELECT * FROM activity');
+
+$my_activities_photos = array();
+$my_activities_title = array();
+$my_activities_description = array();
+
+//je parcours ma table activities
+while ($donnees = $rep_2->fetch())
+{
+  //si l'id du compte connecté est le même que le celui du propriétaire de l'activité
+  if ($_SESSION['user_id'] == $donnees['user_id'] ) {
+    //je remplis mon array d'id d'activités
+    $my_activities_photos [] = $donnees ['activity_photo'];
+    $my_activities_title [] = $donnees ['activity_title'];
+    $my_activities_description [] = $donnees['activity_description'];
+  }
+
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -243,14 +262,14 @@ while ($donnees = $rep->fetch())
             <h5>My Activities</h5>
           </div>
           <div class="card-body">
-            <h4>Discover the Louvre</h4>
-            <img src="img/louvre.jpg" width="500px" class="rounded d-block">
+            <h4><?php echo "$my_activities_title[0]" ?></h4>
+            <img src="img/<?php echo "$my_activities_photos[0]" ?>" width="500px" class="rounded d-block">
 
             <br>
             <div class="px-6 py-2">
               <div class="input-group mb-3 col-8 d-block">
                 <div class="form-group">
-                  <label for="exampleFormControlInput1"><b>Description</b></label>
+                  <label for="exampleFormControlInput1"><b>Description: </b><?php echo "$my_activities_description[0]" ?></label>
                 </div>
               </div>
 
