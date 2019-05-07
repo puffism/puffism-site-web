@@ -30,13 +30,15 @@
 				$_SESSION['user_first_name'] = $donnees['user_first_name'];
 				$_SESSION['user_mail'] = $donnees['user_mail'];
 				$_SESSION['user_id'] = $donnees['user_id'];
+				$_SESSION['user_gender'] =$donnees['user_gender'];
+				$_SESSION['user_password'] =$donnees['user_password'];
+				$_SESSION['user_phone'] =$donnees['user_phone'];
+				$_SESSION['user_privilege'] =$donnees['user_privilege'];
 
-				//récuperation des photos
-				//$_SESSION['photo1'] = $donnees['url_photo1'];
-				//$_SESSION['photo2'] = $donnees['url_photo2'];
-				//$_SESSION['photo3'] = $donnees['url_photo3'];
+				//récuperation de la photo de profile
+				$_SESSION['image_user_id'] = $donnees['image_user_id'];
 
-				header('Location: index.php');
+				header('Location: profile.php');
 			}
 		}
 	}
@@ -44,4 +46,4 @@
 	}
         $rep->closeCursor();
 
-    ?>
+?>

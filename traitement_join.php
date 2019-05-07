@@ -40,18 +40,19 @@ else {
 }
 //on écrit dans la base de données
 
-$req = $bdd->prepare('INSERT INTO user(user_first_name, user_last_name, user_gender, user_mail, user_password, user_phone)
-VALUES (:user_first_name, :user_last_name, :user_gender, :user_mail, :user_password, :user_phone)'); // préparation de la requête
+$req = $bdd->prepare('INSERT INTO user(user_first_name, user_last_name, user_gender, user_mail, user_password, user_phone,image_user_id)
+VALUES (:user_first_name, :user_last_name, :user_gender, :user_mail, :user_password, :user_phone, :image_user_id)'); // préparation de la requête
 
 if ($test==true) {
   // écriture dans la base de données
   $req->execute(array(
-  'user_mail' => $_POST['user_mail'],
-  'user_last_name' => $_POST['user_last_name'],
   'user_first_name' => $_POST['user_first_name'],
+  'user_last_name' => $_POST['user_last_name'],
   'user_gender' => 'Male',
+  'user_mail' => $_POST['user_mail'],
+  'user_password' => $_POST['user_password'],
   'user_phone' => '0120563594',
-  'user_password' => $_POST['user_password']
+  'image_user_id'=> '1'
   ));
   header('Location: login.php');
 }
