@@ -57,22 +57,22 @@
           <a class="nav-link" href="login.html">Login</a>
         </li>
       </ul>
-      
+
       <div class="col offset-6" style="margin-left:850px">
         <a href="profile.html">
           <img src="/img/icons/user.png" alt="user" width="20px" height="20px">
-          </a>
-          <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <h6 class="card-text text-white">User</h6>
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="profile.html">My profile</a>
-            <a class="dropdown-item" href="#">Activities</a>
-            <a class="dropdown-item" href="#">Log out</a>
-          </div>
+        </a>
+        <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <h6 class="card-text text-white">User</h6>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="profile.html">My profile</a>
+          <a class="dropdown-item" href="#">Activities</a>
+          <a class="dropdown-item" href="#">Log out</a>
         </div>
-        
+      </div>
+
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -84,72 +84,170 @@
 
   <br>
 
-  <div class="card mx-auto shadow-lg" style="max-width: 25rem; max-height: 50rem">
-    <div class="card-header text-center">
-      <h5>Join</h5>
-    </div>
-    <div class="card-body">
+  <div class="container">
 
-      <img src="img/puffism_logo.png" width="200px" height="200px" class="rounded mx-auto d-block animated rotateIn">
+    <div class="row">
 
-      <br>
-
-      <form class="px-4 py-3">
-
-        <div class="input-group mb-3 col mx-auto">
-          <input type="text" class="form-control" placeholder="First name" aria-label="First name"
-            aria-describedby="basic-addon1">
-        </div>
-
-        <div class="input-group mb-3 col mx-auto">
-          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
-            aria-describedby="basic-addon1">
-        </div>
-
-        <div class="input-group mb-3 col mx-auto">
-          <input type="email" class="form-control" placeholder="Email" aria-label="Email"
-            aria-describedby="basic-addon1">
-        </div>
-
-        <div class="input-group mb-3 col mx-auto">
-          <input type="tel" class="form-control input-medium bfh-phone" data-format="+33 dd dd dd dd dd" placeholder="Phone number" aria-label="Phone number"
-            aria-describedby="basic-addon1">
-        </div>
-
-        <div class="input-group mb-3 col mx-auto">
-          <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Gender</label>
+      <div class="col mb-3">
+        <div class="card mx-auto shadow-lg" style="max-width: 25rem; max-height: 50rem">
+          <div class="card-header text-center">
+            <h5>Join as a tourist</h5>
           </div>
-          <select class="custom-select" id="inputGroupSelect01">
-            <option selected>Choose...</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-            <option value="3">Other</option>
-          </select>
+          <div class="card-body">
+
+            <img src="img/puffism_logo.png" width="200px" height="200px"
+              class="rounded mx-auto d-block animated rotateIn">
+
+            <br>
+
+            <form class="px-4 py-3">
+
+              <div class="input-group mb-3 col mx-auto">
+                <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                  aria-describedby="basic-addon1">
+              </div>
+
+              <div class="input-group mb-3 col mx-auto">
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
+                  aria-describedby="basic-addon1">
+              </div>
+
+              <div class="input-group mb-3 col mx-auto">
+                <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                  aria-describedby="basic-addon1">
+              </div>
+
+              <div class="input-group mb-3 col mx-auto">
+                <input type="tel" class="form-control input-medium bfh-phone" data-format="+33 dd dd dd dd dd"
+                  placeholder="Phone number" aria-label="Phone number" aria-describedby="basic-addon1">
+              </div>
+
+              <div class="input-group mb-3 col mx-auto">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Gender</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                  <option selected>Choose...</option>
+                  <option value="1">Male</option>
+                  <option value="2">Female</option>
+                  <option value="3">Other</option>
+                </select>
+              </div>
+
+              <br>
+
+              <div class="input-group mb-3 col mx-auto">
+                <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+                  aria-describedby="basic-addon1">
+              </div>
+
+              <div class="input-group mb-3 col mx-auto">
+                <input type="password" class="form-control" placeholder="Re-enter password"
+                  aria-label="Re-enter password" aria-describedby="basic-addon1">
+              </div>
+
+              <br>
+
+              <div class="text-center">
+                <form action="/action_page.php">
+                  <button class="btn btn-outline-success mb-3" type="submit" id="button-addon4"> Become a Puffin </button>
+                </form>
+              </div>
+
+            </form>
+          </div>
         </div>
+      </div>
 
-        <br>
+      <div class="col-8">
 
-        <div class="input-group mb-3 col mx-auto">
-          <input type="password" class="form-control" placeholder="Password" aria-label="Password"
-            aria-describedby="basic-addon1">
-        </div>
+        <div class="card mx-auto shadow-lg">
+          <div class="card-header text-center">
+            <h5>Become a guide</h5>
+          </div>
 
-        <div class="input-group mb-3 col mx-auto">
-          <input type="password" class="form-control" placeholder="Re-enter password" aria-label="Re-enter password"
-            aria-describedby="basic-addon1">
-        </div>
+          <div class="card-body">
 
-        <br>
 
-        <div class="text-center">
-          <form action="/action_page.php">
-            <button class="btn btn-outline-success" type="submit" id="button-addon4"> Become a Puffin </button>
+
+            <img src="img/puffism_logo.png" width="200px" height="200px"
+              class="rounded mx-auto d-block animated rotateIn">
+
+            <br>
+            <div class="row">
+              <div class="col" style="max-width: 25rem; max-height: 50rem">
+                <form class="px-4 py-3">
+
+                  <div class="input-group mb-3 col mx-auto">
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                      aria-describedby="basic-addon1">
+                  </div>
+
+                  <div class="input-group mb-3 col mx-auto">
+                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
+                      aria-describedby="basic-addon1">
+                  </div>
+
+                  <div class="input-group mb-3 col mx-auto">
+                    <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                      aria-describedby="basic-addon1">
+                  </div>
+
+                  <div class="input-group mb-3 col mx-auto">
+                    <input type="tel" class="form-control input-medium bfh-phone" data-format="+33 dd dd dd dd dd"
+                      placeholder="Phone number" aria-label="Phone number" aria-describedby="basic-addon1">
+                  </div>
+
+                  <div class="input-group mb-3 col mx-auto">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Gender</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                      <option selected>Choose...</option>
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
+                      <option value="3">Other</option>
+                    </select>
+                  </div>
+
+                  <br>
+
+                  <div class="input-group mb-3 col mx-auto">
+                    <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+                      aria-describedby="basic-addon1">
+                  </div>
+
+                  <div class="input-group mb-3 col mx-auto">
+                    <input type="password" class="form-control" placeholder="Re-enter password"
+                      aria-label="Re-enter password" aria-describedby="basic-addon1">
+                  </div>
+              </div>
+
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="Message">Why do you want to become a Local Guide?</label>
+                  <textarea class="form-control" id="Message" rows="14"></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="text-center">
+            <form action="/action_page.php">
+              <button class="btn btn-outline-success mb-3" type="submit" id="button-addon4"> Send Application
+              </button>
+            </form>
+          </div>
+
           </form>
         </div>
-
-      </form>
+      </div>
     </div>
+
+  </div>
+
   </div>
 
   <br>
@@ -159,7 +257,8 @@
   <!--Ces scripts sont necessaire pour ajouter jQuery, Popper.js et JavaScript a bootstrap-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js">
+  </script>
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous">
   </script>
