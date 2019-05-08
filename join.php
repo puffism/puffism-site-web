@@ -20,7 +20,7 @@
 <body style="background-color:rgb(114, 198, 236);">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="index.php">
       <h2>Puffism</h2>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -31,48 +31,32 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="activities.html">Activities</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="activities.php">Activities</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="services.php">Services</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="about.php">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.php">Contact</a>
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link active" href="join.html">Join</a>
+          <a class="nav-link active" href="join.php">Join</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="login.html">Login</a>
+          <a class="nav-link" href="login.php">Login</a>
         </li>
       </ul>
-
-      <div class="col offset-6" style="margin-left:850px">
-        <a href="profile.html">
-          <img src="/img/icons/user.png" alt="user" width="20px" height="20px">
-        </a>
-        <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          <h6 class="card-text text-white">User</h6>
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="profile.html">My profile</a>
-          <a class="dropdown-item" href="#">Activities</a>
-          <a class="dropdown-item" href="#">Log out</a>
-        </div>
-      </div>
-
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

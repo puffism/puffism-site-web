@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -19,7 +22,7 @@
 <body style="background-color:rgb(114, 198, 236);">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="index.php">
       <h2>Puffism</h2>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -39,42 +42,50 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="services.php">Services</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="about.php">About</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="contact.php">Contact</a>
         </li>
+        <?php
+          if(!isset($_SESSION['user_id']))
+          { // Si l'utilisateur est déconnecté on lui affiche l'inscription et la connexion
+        ?>
+            <li class="nav-item">
+              <a class="nav-link" href="join.php">Join</a>
+            </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="join.php">Join</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">Login</a>
-        </li>
-
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">Login</a>
+            </li>
+        <?php
+          }
+          else
+          {
+        ?>
+          <div class="col offset-6" style="margin-left:850px">
+            <a href="profile.php">
+              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px">
+            </a>
+            <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <h6 class="card-text text-white">User</h6>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="profile.php">My profile</a>
+              <a class="dropdown-item" href="#">Activities</a>
+              <a class="dropdown-item" href="log_out.php">Log out</a>
+            </div>
+          </div>
+        <?php
+          }
+        ?>
       </ul>
-
-      <div class="col offset-6" style="margin-left:850px">
-        <a href="profile.php">
-          <img src="/img/icons/user.png" alt="user" width="20px" height="20px">
-        </a>
-        <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          <h6 class="card-text text-white">User</h6>
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="profile.php">My profile</a>
-          <a class="dropdown-item" href="#">Activities</a>
-          <a class="dropdown-item" href="log_out.php">Log out</a>
-        </div>
-      </div>
-
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -136,7 +147,7 @@
 
           <div class="carousel-inner rounded">
             <div class="carousel-item active">
-              <a href="act_details.html">
+              <a href="act_details.php">
                 <!---NOT WORKING HAVE TO CHECK-->
                 <img src="img/louvre.jpg" class="d-block w-100" alt="louvre">
               </a>
@@ -146,7 +157,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <a href="act_details.html">
+              <a href="act_details.php">
                 <img src="img/cubajosemarti.jpg" class="d-block w-100" alt="cubajosemartinmemorial">
               </a>
               <div class="card-img-overlay text-white">
@@ -155,7 +166,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <a href="act_details.html">
+              <a href="act_details.php">
                 <img src="img/germanydresden.jpg" class="d-block w-100" alt="semperorper">
               </a>
               <div class="card-img-overlay text-white">
@@ -184,7 +195,7 @@
 
 
           <div class="card mb-3">
-            <a href="act_details.html">
+            <a href="act_details.php">
               <img class="card-img-top" src="img/toureiffel.jpg" alt="Card image cap">
             </a>
             <div class="card-body">
@@ -196,7 +207,7 @@
           </div>
 
           <div class="card mb-3">
-            <a href="act_details.html">
+            <a href="act_details.php">
               <img class="card-img-top" src="img/miamibeach.jpg" alt="Card image cap">
             </a>
             <div class="card-body">
@@ -207,7 +218,7 @@
           </div>
 
           <div class="card mb-3">
-            <a href="act_details.html">
+            <a href="act_details.php">
               <img class="card-img-top" src="img/japon1.jpg" alt="Card image cap">
             </a>
             <div class="card-body">
@@ -222,7 +233,7 @@
         <div class="card-deck wow zoomIn">
 
           <div class="card mb-3">
-            <a href="act_details.html">
+            <a href="act_details.php">
               <img class="card-img-top" src="img/notredame.jpeg" alt="Card image cap">
             </a>
             <div class="card-body">
@@ -233,7 +244,7 @@
           </div>
 
           <div class="card mb-3">
-            <a href="act_details.html">
+            <a href="act_details.php">
               <img class="card-img-top" src="img/nycstockexchange.jpg" alt="Card image cap">
             </a>
             <div class="card-body">
@@ -244,7 +255,7 @@
           </div>
 
           <div class="card mb-3">
-            <a href="act_details.html">
+            <a href="act_details.php">
               <img class="card-img-top" src="img/arcdetriomphe2.jpeg" alt="Card image cap">
             </a>
             <div class="card-body">
@@ -259,7 +270,7 @@
         <div class="card-deck wow zoomIn">
 
           <div class="card mb-3">
-            <a href="act_details.html">
+            <a href="act_details.php">
               <img class="card-img-top" src="img/akihabara.jpg" alt="Card image cap">
             </a>
             <div class="card-body">
@@ -270,7 +281,7 @@
           </div>
 
           <div class="card mb-3">
-            <a href="act_details.html">
+            <a href="act_details.php">
               <img class="card-img-top" src="img/les2alpes2.jpg" alt="Card image cap">
             </a>
             <div class="card-body">
@@ -281,7 +292,7 @@
           </div>
 
           <div class="card mb-3">
-            <a href="act_details.html">
+            <a href="act_details.php">
               <img class="card-img-top" src="img/chateaudammarieenpuisaye.jpg" alt="Card image cap">
             </a>
             <div class="card-body">
@@ -296,7 +307,7 @@
         <div class="card-deck wow zoomIn">
 
           <div class="card mb-3">
-            <a href="act_details.html">
+            <a href="act_details.php">
               <img class="card-img-top" src="img/chateau1.jpg" alt="Card image cap">
             </a>
             <div class="card-body">
@@ -307,7 +318,7 @@
           </div>
 
           <div class="card mb-3">
-            <a href="act_details.html">
+            <a href="act_details.php">
               <img class="card-img-top" src="img/templekoyasan1.jpg" alt="Card image cap">
             </a>
             <div class="card-body">
@@ -318,7 +329,7 @@
           </div>
 
           <div class="card mb-3">
-            <a href="act_details.html">
+            <a href="act_details.php">
               <img class="card-img-top" src="img/vueempirestate.jpg" alt="Card image cap">
             </a>
             <div class="card-body">

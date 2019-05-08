@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -18,7 +21,7 @@
 <body style="background-color:rgb(114, 198, 236);">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-    <a class=navbar-brand href="index.html">
+    <a class=navbar-brand href="index.php">
       <h2>Puffism</h2>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -36,41 +39,50 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="services.php">Services</a>
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link active" href="about.html">About</a>
+          <a class="nav-link active" href="about.php">About</a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link" href="contact.php">Contact</a>
         </li>
+        <?php
+          if(!isset($_SESSION['user_id']))
+          { // Si l'utilisateur est déconnecté on lui affiche l'inscription et la connexion
+        ?>
+            <li class="nav-item">
+              <a class="nav-link" href="join.php">Join</a>
+            </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="join.php">Join</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">Login</a>
-        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">Login</a>
+            </li>
+        <?php
+          }
+          else
+          {
+        ?>
+          <div class="col offset-6" style="margin-left:850px">
+            <a href="profile.php">
+              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px">
+            </a>
+            <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <h6 class="card-text text-white">User</h6>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="profile.php">My profile</a>
+              <a class="dropdown-item" href="#">Activities</a>
+              <a class="dropdown-item" href="log_out.php">Log out</a>
+            </div>
+          </div>
+        <?php
+          }
+        ?>
       </ul>
-
-      <div class="col offset-6" style="margin-left:850px">
-        <a href="profile.php" style="text-decoration: none">
-          <img src="/img/icons/user.png" alt="user" width="20px" height="20px">
-        </a>
-        <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          <h6 class="card-text text-white">User</h6>
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="profile.php">My profile</a>
-          <a class="dropdown-item" href="#">Activities</a>
-          <a class="dropdown-item" href="log_out.php">Log out</a>
-        </div>
-      </div>
-
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

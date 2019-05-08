@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -44,44 +47,54 @@
             <a class="nav-link active" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="activities.html">Activities</a>
+            <a class="nav-link" href="activities.php">Activities</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
+            <a class="nav-link" href="services.php">Services</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about.php">About</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="contact.php">Contact</a>
           </li>
+          <?php
+            if(!isset($_SESSION['user_id']))
+            { // Si l'utilisateur est déconnecté on lui affiche l'inscription et la connexion
+          ?>
+              <li class="nav-item">
+                <a class="nav-link" href="join.php">Join</a>
+              </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="join.php">Join</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="login.php">Login</a>
-          </li>
-
+              <li class="nav-item">
+                <a class="nav-link" href="login.php">Login</a>
+              </li>
+          <?php
+            }
+            else
+            {
+          ?>
+            <div class="col offset-6" style="margin-left:850px">
+              <a href="profile.php">
+                <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px">
+              </a>
+              <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <h6 class="card-text text-white">User</h6>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="profile.php">My profile</a>
+                <a class="dropdown-item" href="#">Activities</a>
+                <a class="dropdown-item" href="log_out.php">Log out</a>
+              </div>
+            </div>
+          <?php
+            }
+          ?>
         </ul>
-        <div class="col offset-6" style="margin-left:850px">
-          <a href="profile.php">
-            <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px">
-          </a>
-          <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <h6 class="card-text text-white">User</h6>
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="profile.php">My profile</a>
-            <a class="dropdown-item" href="#">Activities</a>
-            <a class="dropdown-item" href="log_out.php">Log out</a>
-          </div>
-        </div>
 
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -150,8 +163,8 @@
               local becomes the tourist!<br><br>It is our ultimate goal to give the tourist and the local guide the
               ultimate touristic experience.</p>
           </div>
-          <footer class="card-footer text-justify">Want to know more? <a href="services.html">See our services</a><br>
-            Need to contact us? <a href="contact.html"> Contact us</a><br>
+          <footer class="card-footer text-justify">Want to know more? <a href="services.php">See our services</a><br>
+            Need to contact us? <a href="contact.php"> Contact us</a><br>
             Want to start creating your adventure? <a href="join.php">Join as tourist</a>
           </footer>
         </div>
@@ -185,8 +198,8 @@
               guide if he/she has lived there long enough.
             </p>
           </div>
-          <footer class="card-footer text-justify">Want to know more? <a href="services.html">See our services</a><br>
-            Need to contact us? <a href="contact.html"> Contact us</a><br>
+          <footer class="card-footer text-justify">Want to know more? <a href="services.php">See our services</a><br>
+            Need to contact us? <a href="contact.php"> Contact us</a><br>
             Want to start sharing your experience? <a href="join.php">Join as local guide</a>
           </footer>
         </div>
