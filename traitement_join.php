@@ -48,10 +48,10 @@ if ($test==true) {
   $req->execute(array(
   'user_first_name' => $_POST['user_first_name'],
   'user_last_name' => $_POST['user_last_name'],
-  'user_gender' => 'Male',
+  'user_gender' => $_POST['user_gender'],
   'user_mail' => $_POST['user_mail'],
   'user_password' => $_POST['user_password'],
-  'user_phone' => '0120563594',
+  'user_phone' => $_POST['user_phone'],
   'image_user_id'=> '1'
   ));
   header('Location: login.php');

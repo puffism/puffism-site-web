@@ -68,6 +68,20 @@
           </li>
 
         </ul>
+        <div class="col offset-6" style="margin-left:850px">
+          <a href="profile.php">
+            <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px">
+          </a>
+          <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <h6 class="card-text text-white">User</h6>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="profile.php">My profile</a>
+            <a class="dropdown-item" href="#">Activities</a>
+            <a class="dropdown-item" href="log_out.php">Log out</a>
+          </div>
+        </div>
 
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -81,7 +95,7 @@
 
   <!--<hr> WEBSITE BODY-->
 
-  <br>
+  <br><br>
 
   <div class="container">
 
@@ -97,7 +111,7 @@
             <div class="card-header">Services and activities are currently unavailable</div>
             <!--<<TO REMOVE-->
             <div class="card-body">
-              <h3 class="card-title">Welcome to Puffism!</h3>
+              <h1 class="card-title">Welcome to Puffism!</h1>
               <p5 class="card-text">We are building a platform so that tourists and
                 guides alike can meet, exchange, discover and have fun!</p5>
             </div>
@@ -113,13 +127,11 @@
   <br>
 
   <div class="container">
-    <center>
-      <h3 class="text-white">What is Puffism?</h3>
-      <video class="rounded" width="960" height="540" controls title="What is Puffism?">
-        <source src="img/Guide Me2.mp4" type="video/mp4">
-        </source>
-      </video>
-    </center>
+    <h3 class="text-white text-center">What is Puffism?</h3>
+    <div class="embed-responsive embed-responsive-16by9 w-75 mx-auto rounded">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cnbyQtC1K1M" frameborder="0"
+        allowfullscreen></iframe>
+    </div>
   </div>
 
   <br><br><br><br><br><br>
@@ -130,9 +142,18 @@
         <div class="card mb-3 bg-light wow fadeIn">
           <div class="card-body">
             <h5 class="card-title">Tourists</h5>
-            <p class="card-text">The tourist can be anyone, a person with a passion for travelling and exploring new
-              cities. It is our ultimate goal to give the tourist the ultimate touristic experience.</p>
+            <p class="card-text text-justify">The tourist aka the Puffin can be anyone, whether a student or a
+              professional with a passion for travelling, exploring new cities and meeting locals. All it takes a few
+              clicks and you can be creating your own unique travelling experience. Surrounded with locals with similar
+              interests.<br><br>Puffism creates an interaction between tourists and locals to create bonds and exchange
+              experiences.When the tourist is home the roles may be inversed, the tourist becomes the local and the
+              local becomes the tourist!<br><br>It is our ultimate goal to give the tourist and the local guide the
+              ultimate touristic experience.</p>
           </div>
+          <footer class="card-footer text-justify">Want to know more? <a href="services.html">See our services</a><br>
+            Need to contact us? <a href="contact.html"> Contact us</a><br>
+            Want to start creating your adventure? <a href="join.php">Join as tourist</a>
+          </footer>
         </div>
       </div>
       <div class="col-5">
@@ -149,16 +170,25 @@
   <div class="container">
     <div class="row">
       <div class="col-5">
-        <div class="card mb-3 bg-light wow zoomIn">
-          <img class="card-img-top rounded" src="img/miamibeach.jpg">
+        <div class="card mb-3 bg-light shadow wow zoomIn">
+          <img class="card-img-top rounded" src="img/tourist_and_locals.jpg">
         </div>
       </div>
       <div class="col">
-        <div class="card mb-3 bg-light wow fadeIn">
+        <div class="card mb-3 bg-light shadow wow fadeIn">
           <div class="card-body">
             <h5 class="card-title">Local Guides</h5>
-            <p class="card-text"></p>
+            <p class="card-text text-justify">The local guide is a local that knows the terrain, the city in which
+              he/she lives in and is willing to interact, accompany and help the tourist in their travels. The local can
+              be seen as an acquaintance that can share knowledge, experiences with the tourist to help them navigate a
+              new city, country.<br><br>The local can very well be a tourist in another country or continue being a
+              guide if he/she has lived there long enough.
+            </p>
           </div>
+          <footer class="card-footer text-justify">Want to know more? <a href="services.html">See our services</a><br>
+            Need to contact us? <a href="contact.html"> Contact us</a><br>
+            Want to start sharing your experience? <a href="join.php">Join as local guide</a>
+          </footer>
         </div>
       </div>
     </div>

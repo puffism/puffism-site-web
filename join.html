@@ -100,25 +100,25 @@
 
             <br>
 
-            <form class="px-4 py-3">
+            <form class="px-4 py-3" form class="px-4 py-3" action="traitement_join.php" method="post">
 
               <div class="input-group mb-3 col mx-auto">
-                <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                <input type="text" class="form-control" name="user_first_name" placeholder="First name" aria-label="First name"
                   aria-describedby="basic-addon1">
               </div>
 
               <div class="input-group mb-3 col mx-auto">
-                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
+                <input type="text" class="form-control" name="user_last_name" placeholder="Last name" aria-label="Last name"
                   aria-describedby="basic-addon1">
               </div>
 
               <div class="input-group mb-3 col mx-auto">
-                <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                <input type="email" class="form-control" name="user_mail" placeholder="Email" aria-label="Email"
                   aria-describedby="basic-addon1">
               </div>
 
               <div class="input-group mb-3 col mx-auto">
-                <input type="tel" class="form-control input-medium bfh-phone" data-format="+33 dd dd dd dd dd"
+                <input type="tel" class="form-control input-medium bfh-phone" name="user_phone" data-format="+33 dd dd dd dd dd"
                   placeholder="Phone number" aria-label="Phone number" aria-describedby="basic-addon1">
               </div>
 
@@ -126,23 +126,23 @@
                 <div class="input-group-prepend">
                   <label class="input-group-text" for="inputGroupSelect01">Gender</label>
                 </div>
-                <select class="custom-select" id="inputGroupSelect01">
+                <select class="custom-select" name="user_gender" id="inputGroupSelect01">
                   <option selected>Choose...</option>
-                  <option value="1">Male</option>
-                  <option value="2">Female</option>
-                  <option value="3">Other</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
               <br>
 
               <div class="input-group mb-3 col mx-auto">
-                <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+                <input type="password" class="form-control" name="user_password" placeholder="Password" aria-label="Password"
                   aria-describedby="basic-addon1">
               </div>
 
               <div class="input-group mb-3 col mx-auto">
-                <input type="password" class="form-control" placeholder="Re-enter password"
+                <input type="password" class="form-control" name="validate_password" placeholder="Re-enter password"
                   aria-label="Re-enter password" aria-describedby="basic-addon1">
               </div>
 
@@ -152,8 +152,7 @@
                 <form action="/action_page.php">
                   <button class="btn btn-outline-success mb-3" type="submit" id="button-addon4"> Become a Puffin </button>
                 </form>
-              </div>
-
+              </div>  
             </form>
           </div>
         </div>

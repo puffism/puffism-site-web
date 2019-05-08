@@ -99,8 +99,8 @@ while ($donnees = $rep_2->fetch())
           <a class="nav-link" href="about.html">About</a>
         </li>
 
-        <li class="nav-item active">
-          <a class="nav-link active" href="contact.html">Contact</a>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
         </li>
 
         <li class="nav-item">
@@ -123,7 +123,7 @@ while ($donnees = $rep_2->fetch())
         <div class="dropdown-menu">
           <a class="dropdown-item" href="profile.php">My profile</a>
           <a class="dropdown-item" href="#">Activites</a>
-          <a class="dropdown-item" href="#">Log out</a>
+          <a class="dropdown-item" href="log_out.php">Log out</a>
         </div>
       </div>
 
@@ -261,40 +261,33 @@ while ($donnees = $rep_2->fetch())
           <div class="card-header text-center">
             <h5>My Activities</h5>
           </div>
+        </div>
+        <br>
+        <div class="card mx-auto shadow-lg">
           <div class="card-body">
-            <h4><?php echo "$my_activities_title[0]" ?></h4>
-            <img src="img/<?php echo "$my_activities_photos[0]" ?>" width="500px" class="rounded d-block">
+          <h4><?php echo "$my_activities_title[0]" ?></h4>
+          <img src="img/<?php echo "$my_activities_photos[0]" ?>" width="500px" class="rounded d-block">
 
-            <br>
-            <div class="px-6 py-2">
-              <div class="input-group mb-3 col-8 d-block">
-                <div class="form-group">
-                  <label for="exampleFormControlInput1"><b>Description: </b><?php echo "$my_activities_description[0]" ?></label>
-                </div>
+          <br>
+          <div class="px-6 py-2">
+            <div class="input-group mb-3 col-8 d-block">
+              <div class="form-group">
+                <label for="exampleFormControlInput1"><b>Description: </b><?php echo "$my_activities_description[0]" ?></label>
               </div>
-
-              <div class="input-group mb-3 col-8 d-block">
-                <div class="form-group">
-                  <label for="exampleFormControlInput1"><b>Contacter le guide:</b> username</label>
-                </div>
-              </div>
-
             </div>
 
-            <br>
-
-            <div class="text-center">
-              <form action="/action_page.php">
-                <button class="btn btn-primary" type="submit"> Edit</button>
-              </form>
-
+            <div class="input-group mb-3 col-8 d-block">
+              <div class="form-group">
+                <label for="exampleFormControlInput1"><b>Contacter le guide:</b> username</label>
+              </div>
             </div>
+          </div>
+          <br>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 
 
   <br>
