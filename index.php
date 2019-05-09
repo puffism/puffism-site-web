@@ -1,5 +1,14 @@
 <?php
 session_start();
+if (isset($_SESSION['user_id'])) {
+  if ($_SESSION['user_privilege']=='Local guide') {
+    $my_profile = 'profile.php';
+  }
+  else {
+    $my_profile = 'profile_t.php';
+  }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -86,7 +95,7 @@ session_start();
                 <h6 class="card-text text-white">User</h6>
               </button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="profile.php">My profile</a>
+                <a class="dropdown-item" href="<?php echo $my_profile ?>">My profile</a>
                 <a class="dropdown-item" href="#">Activities</a>
                 <a class="dropdown-item" href="log_out.php">Log out</a>
               </div>
