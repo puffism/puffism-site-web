@@ -8,17 +8,20 @@
   <!-- Meta tag pour librairie Bootstrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!--Meta tag pour librairie de animate.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
 
   <title>Puffism</title>
   <link rel="icon" href="img/puffism_logo.png">
 </head>
 
+
 <body style="background-color:rgb(114, 198, 236);">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-    <a class=navbar-brand href="index.html">
+    <a class="navbar-brand" href="index.html">
       <h2>Puffism</h2>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -35,8 +38,8 @@
           <a class="nav-link" href="activities.html">Activities</a>
         </li>
 
-        <li class="nav-item active">
-          <a class="nav-link active" href="services.html">Services</a>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
         </li>
 
         <li class="nav-item">
@@ -78,46 +81,134 @@
     </div>
   </nav>
 
-  <br><br>
-  <div class="container">
-    <div class="card mb-3 bg-light shadow wow fadeIn">
-      <div class="card-body">
-        <h5 class="card-title">Services</h5>
-        <p class="card-text text-justify">
-          Puffism est donc une plateforme de mise en relation selon différents critères et affinités de touristes et de
-          guides locaux qui ont soif de rencontres uniques avec différentes cultures. Cette plateforme prend donc la
-          forme
-          d’un site internet à la portée de tous sur lequel les guides peuvent se présenter et proposer un panel
-          d’activités
-          uniques aux touristes.<br><br>
-          Touristes et guides locaux sont donc amenés à créer un compte de manière rapide et gratuite avec leurs
-          coordonnées
-          qui seront utilisées pour la mise en relation. Les activités proposées par les guides seront classées par
-          destination sur le site, avec leur description, leur durée ainsi que le nombre de personne auquel elles sont
-          ouvertes. <br><br>
-          Pour une expérience plus personnalisée, des guides dont les centres d’intérêts sont en adéquation avec le
-          touriste
-          pourront être suggérés de façon à affiner la recherche.<br><br>
-          Notre projet est basé sur le partage, nous encourageons chaque utilisateur à être à la fois touriste, mais aussi
-          guide dans son pays. Ainsi, nous pourrions à l’avenir mettre en place une monnaie d’échange que l’on pourrait
-          gagner en tant que guide et dépenser en tant que touriste. Bien sûr pour les personnes qui ne souhaiteraient
-          pas
-          être guide nous pourrions proposer d’acheter cette monnaie en argent réel. Ce système économique nous
-          permettrait
-          également de générer des profits tout en proposant un système totalement gratuit. En effet, un site payant
-          freinerait sûrement une grande partie de notre cible. <br><br>
-          Dans cette expérience, nous serons bien sûr les premiers utilisateurs à proposer sur le site nos propres
-          activités qui permettront de faire découvrir le fonctionnement de notre plateforme. Les premiers retours dont nous
-          avons eux étaient positifs et les utilisateurs étaient prêtes à s’inscrire sur le site en tant que guide dans leur
-          pays.
-        </p>
+  <br>
+
+  <br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-4">
+        <div class="card mx-auto shadow-lg" style="max-width: 30rem; max-height: 50rem">
+          <div class="card-header text-center">
+            <h5>Personal Info</h5>
+          </div>
+          <div class="card-body">
+            <img src="img/icons/user_profile.png" width="200px" height="200px"
+              class="img-fluid rounded mx-auto d-block">
+
+            <br>
+            <div class="px-6 py-2">
+              <div class="input-group mb-3 col-8 mx-auto d-block">
+                <div class="form-group">
+                  <label>First name</label>
+                </div>
+              </div>
+
+              <div class="input-group mb-3 col-8 mx-auto d-block">
+                <div class="form-group">
+                  <label>Last name</label>
+                </div>
+              </div>
+
+              <div class="input-group mb-3 col-8 mx-auto d-block">
+                <div class="form-group">
+                  <label>Gender</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group mb-3 col-8 mx-auto d-block">
+              <div class="form-group">
+                <label>Phone number</label>
+              </div>
+            </div>
+
+
+            <div class="input-group mb-3 col-8 mx-auto d-block">
+              <div class="form-group">
+                <label>Email address</label>
+              </div>
+            </div>
+
+
+            <div class="input-group mb-3 col-8 mx-auto d-block">
+              <div class="form-group">
+                <label>Password</label>
+              </div>
+            </div>
+
+
+            <div class="input-group mb-3 col-8 mx-auto d-block">
+              <div class="form-group">
+                <label>Status</label>
+              </div>
+            </div>
+            <br>
+
+            <div class="text-center">
+              <form action="/action_page.php">
+                <button class="btn btn-primary" type="submit"> Edit</button>
+              </form>
+
+            </div>
+
+          </div>
+        </div>
       </div>
-      <footer class="card-footer text-justify">Need more information? <a href="contact.html"> Contact us</a><br>
-        Want to start creating your adventure? <a href="join.html">Join as tourist</a><br>
-        Want to start sharing your experience? <a href="join.html">Join as local guide</a>
-      </footer>
+
+      <div class="col-7">
+        <div class="card mx-auto shadow-lg">
+          <div class="card-header text-center">
+            <h5>My Reservations</h5>
+          </div>
+        </div>
+        <br>
+        <div class="card mx-auto shadow-lg">
+          <div class="card-body">
+
+            <div class="row">
+
+              <div class="col-6">
+                <h4>Discover the Louvre</h4>
+                <br>
+                <a href="act_details.html">
+                  <img class="img-fluid card-img-top rounded d-block" src="img/louvre.jpg">
+                </a>
+                <br>
+                <div>
+                  <p><b>Date of reservation:</b> date</p>
+                </div>
+                <div>
+                  <p><b>Contacter le guide:</b> username</p>
+                </div>
+              </div>
+
+              <div class="col">
+                <br>
+                <br>
+
+                <p class="text-left">
+                  <b>Description</b>
+                  <br>
+                  <!--Write description here-->
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p class="card-text text-right px-3"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+          <br>
+
+
+        </div>
+      </div>
     </div>
   </div>
+
+
+
+  <br>
+
   <hr>
 
   <section>
@@ -135,6 +226,7 @@
       </div>
     </div>
   </section>
+
   <!--Optionnel JavaScript-->
   <!--Ces scripts sont necessaire pour ajouter jQuery, Popper.js et JavaScript a bootstrap-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
