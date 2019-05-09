@@ -1,6 +1,44 @@
+
 <?php
+// Starting session
 session_start();
+
+//My activities
+ // connexion à la base de donnée
+ try
+{
+ 	$bdd = new PDO('mysql:host=localhost;dbname=puffism;charset=utf8', 'root', '',
+ 				array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+}
+catch (Exception $e)
+{
+ 	die('Erreur : ' . $e->getMessage());
+}
+
+$rep = $bdd->query('SELECT * FROM activity');
+
+//on stocke dans des array les info des activity
+$my_activities_photos = array();
+$my_activities_title = array();
+$my_activities_description = array();
+$my_activities_id = array();
+$my_activities_category = array();
+$my_activities_city = array();
+$my_activities_country = array();
+//je parcours ma table activity
+while ($donnees = $rep->fetch())
+{
+  //je remplis mon array d'id d'activités
+  $my_activities_photos [] = $donnees ['activity_photo'];
+  $my_activities_title [] = $donnees ['activity_title'];
+  $my_activities_description [] = $donnees['activity_description'];
+  $my_activities_id [] = $donnees['activity_id'];
+  $my_activities_category [] = ['activity_category'];
+  $my_activities_city [] = ['activity_city'];
+  $my_activities_country [] = ['activity_country'];
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -190,9 +228,107 @@ session_start();
         <br>
         <br>
         <br>
+          <div class="card-deck wow zoomIn">
 
+          <div class="card mb-3">
+            <a href="act_details.php">
+              <img class="card-img-top" src="img/<?php echo "$my_activities_photos[0]" ?>" alt="Card image cap">
+              <?php
+                $_SESSION['temp_activity_id'] = $my_activities_id [0];
+              ?>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title"><?php echo "$my_activities_title[0]" ?></h5>
+              <p class="card-text"></p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+
+          </div>
+
+
+          <div class="card mb-3">
+            <a href="act_details.php">
+              <img class="card-img-top" src="img/<?php echo "$my_activities_photos[1]" ?>" alt="Card image cap">
+              <?php
+                $_SESSION['temp_activity_id'] = $my_activities_id [1];
+              ?>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title"><?php echo "$my_activities_title[1]" ?></h5>
+              <p class="card-text"></p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+
+          </div>
+
+          <div class="card mb-3">
+            <form action='act_details.php' method='post'>
+              <input type="submit" name='activity_nb_3'/>
+                  <img class="card-img-top" src="img/<?php echo "$my_activities_photos[2]" ?>" alt="Card image cap">
+              </input>
+            </form>
+            <?php
+              if(isset($_POST['activity_nb_3']))
+              {
+                  echo "ok";
+                  $_SESSION['temp_activity_id'] = $my_activities_id [2];
+              }
+            ?>
+            <div class="card-body">
+              <h5 class="card-title"><?php echo "$my_activities_title[2]" ?></h5>
+              <p class="card-text"></p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
         <div class="card-deck wow zoomIn">
 
+          <div class="card mb-3">
+            <form action='act_details.php' method='post'>
+              <input type="submit" name='activity_nb_4'/>
+                  <img class="card-img-top" src="img/<?php echo "$my_activities_photos[3]" ?>" alt="Card image cap">
+              </input>
+            </form>
+            <?php
+              if(isset($_POST['activity_nb_4']))
+              {
+                  echo "ok";
+                  $_SESSION['temp_activity_id'] = $my_activities_id [3];
+              }
+            ?>
+            <div class="card-body">
+              <h5 class="card-title"><?php echo "$my_activities_title[3]" ?></h5>
+              <p class="card-text"></p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <form action='act_details.php' method='post'>
+              <input type="submit" name='activity_nb_5'/>
+                  <img class="card-img-top" src="img/<?php echo "$my_activities_photos[4]" ?>" alt="Card image cap">
+              </input>
+            </form>
+            <?php
+              if(isset($_POST['activity_nb_5']))
+              {
+                  echo "ok";
+                  $_SESSION['temp_activity_id'] = $my_activities_id [4];
+              }
+            ?>
+
+            <div class="card-body">
+              <h5 class="card-title"><?php echo "$my_activities_title[4]" ?></h5>
+              <p class="card-text"></p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="card-deck wow zoomIn">
 
           <div class="card mb-3">
             <a href="act_details.php">
@@ -406,6 +542,29 @@ session_start();
 </body>
 
 </html>
+<?php
+  if(isset($_POST['activity_nb_1']))
+  {
+      $_SESSION['temp_activity_id'] = $my_activities_id [0];
+  }
+
+  if(isset($_POST['activity_nb_2']))
+  {
+      $_SESSION['temp_activity_id'] = $my_activities_id [1];
+  }
+  if(isset($_POST['activity_nb_3']))
+  {
+      $_SESSION['temp_activity_id'] = $my_activities_id [2];
+  }
+  if(isset($_POST['activity_nb_4']))
+  {
+      $_SESSION['temp_activity_id'] = $my_activities_id [3];
+  }
+  if(isset($_POST['activity_nb_5']))
+  {
+      $_SESSION['temp_activity_id'] = $my_activities_id [4];
+  }
+?>
 
 <!--        <a href="">
           <div class="container animated tada">

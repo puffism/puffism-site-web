@@ -1,3 +1,37 @@
+<?php
+// Starting session
+session_start();
+//My activities
+ // connexion à la base de donnée
+ try
+{
+ 	$bdd = new PDO('mysql:host=localhost;dbname=puffism;charset=utf8', 'root', '',
+ 				array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+}
+catch (Exception $e)
+{
+ 	die('Erreur : ' . $e->getMessage());
+}
+
+$rep = $bdd->query('SELECT * FROM activity');
+//je parcours ma table activity
+while ($donnees = $rep->fetch())
+{
+  //je récupère les informations de l'activité
+  if($_SESSION['temp_activity_id'] == $donnees ['activity_id']){
+
+    $temp_activity_photo = $donnees ['activity_photo'];
+    $temp_activity_title = $donnees ['activity_title'];
+    $temp_activity_description = $donnees['activity_description'];
+    $temp_activity_category = ['activity_category'];
+    $temp_activity_city = ['activity_city'];
+    $temp_activity_country = ['activity_country'];
+
+  }
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -19,7 +53,7 @@
 <body style="background-color:rgb(114, 198, 236);">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="index.php">
       <h2>Puffism</h2>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -39,42 +73,50 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="services.php">Services</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="about.php">About</a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link" href="contact.php">Contact</a>
         </li>
+        <?php
+          if(!isset($_SESSION['user_id']))
+          { // Si l'utilisateur est déconnecté on lui affiche l'inscription et la connexion
+        ?>
+            <li class="nav-item">
+              <a class="nav-link" href="join.php">Join</a>
+            </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="join.php">Join</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">Login</a>
-        </li>
-
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">Login</a>
+            </li>
+        <?php
+          }
+          else
+          {
+        ?>
+          <div class="col offset-6" style="margin-left:850px">
+            <a href="profile.php">
+              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px">
+            </a>
+            <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <h6 class="card-text text-white">User</h6>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="profile.php">My profile</a>
+              <a class="dropdown-item" href="#">Activities</a>
+              <a class="dropdown-item" href="log_out.php">Log out</a>
+            </div>
+          </div>
+        <?php
+          }
+        ?>
       </ul>
-
-      <div class="col offset-6" style="margin-left:850px">
-        <a href="profile.html">
-          <img src="/img/icons/user.png" alt="user" width="20px" height="20px" class="img-fluid">
-        </a>
-        <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          <h6 class="card-text text-white">User</h6>
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="profile.php">My profile</a>
-          <a class="dropdown-item" href="#">Activities</a>
-          <a class="dropdown-item" href="log_out.php">Log out</a>
-        </div>
-      </div>
-
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -134,15 +176,15 @@
 
         <div class="card mx-auto shadow-lg">
           <div class="card-header text-center">
-            <h4>Tour Eiffel</h4>
+            <h4><?php echo "$temp_activity_title" ?></h4>
           </div>
           <div class="card-body">
 
             <div class="row">
 
               <div class="col-6">
-                <a href="act_details.html">
-                  <img class="img-fluid card-img-top rounded d-block" src="img/toureiffel.jpg">
+                <a href="act_details.php">
+                  <img class="card-img-top rounded d-block" src="img/<?php echo "$temp_activity_photo" ?>" alt="Card image cap">
                 </a>
                 <br>
                 <div>
@@ -153,7 +195,8 @@
 
               <div class="col-3">
                 <p class="text-left">
-                  <b>Description</b>
+                  <b>Description: </b>
+                  <?php echo "$temp_activity_description" ?>
                   <br>
                   <!--Write description here-->
                 </p>
@@ -165,13 +208,8 @@
 
 
             <br>
-            <div class="text-center">
-              <form action="/action_page.php">
-                <button class="btn btn-primary" type="submit"> Add to Reservations</button>
-              </form>
-            </div>
-          </div>
 
+          </div>
         </div>
 
         <br>
