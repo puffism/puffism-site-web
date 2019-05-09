@@ -74,7 +74,7 @@
       <h5>Login</h5>
     </div>
     <div class="card-body">
-      <img src="img/puffism_logo.png" width="200px" height="200px" class="rounded mx-auto d-block animated rotateIn">
+      <img src="img/puffism_logo.png" width="200px" height="200px" class="img-fluid rounded mx-auto d-block animated rotateIn">
 
       <br>
 
@@ -89,8 +89,7 @@
         <div class="input-group mb-3 col mx-auto">
           <div class="input-group-prepend">
           </div>
-          <input type="text" class="form-control"name="user_password" placeholder="Password" aria-label="Password"
-            aria-describedby="basic-addon1">
+          <input type="password" class="form-control"name="user_password" placeholder="Password" aria-label="Password">
         </div>
 
         <div class="input" style="text-align:center">

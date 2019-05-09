@@ -70,7 +70,7 @@ session_start();
         ?>
           <div class="col offset-6" style="margin-left:850px">
             <a href="profile.php">
-              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px">
+              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px" class="img-fluid">
             </a>
             <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
@@ -102,7 +102,7 @@ session_start();
       <h5>Contact Us</h5>
     </div>
     <div class="card-body">
-      <img src="img/puffism_logo.png" width="200px" height="200px" class="rounded mx-auto d-block animated rotateIn">
+      <img src="img/puffism_logo.png" width="200px" height="200px" class="img-fluid rounded mx-auto d-block animated rotateIn">
 
       <br>
       <form class="px-6 py-2">

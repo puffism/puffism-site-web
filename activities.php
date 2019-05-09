@@ -108,7 +108,7 @@ while ($donnees = $rep->fetch())
         ?>
           <div class="col offset-6" style="margin-left:850px">
             <a href="profile.php">
-              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px">
+              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px" class="img-fluid">
             </a>
             <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
@@ -231,7 +231,7 @@ while ($donnees = $rep->fetch())
           <div class="card-deck wow zoomIn">
 
           <div class="card mb-3">
-            <a href="act_details.php">
+            <a href="act_details.php?temp_activity_id=<?php echo $my_activities_id [0]; ?>">
               <img class="card-img-top" src="img/<?php echo "$my_activities_photos[0]" ?>" alt="Card image cap">
               <?php
                 $_SESSION['temp_activity_id'] = $my_activities_id [0];
@@ -247,7 +247,7 @@ while ($donnees = $rep->fetch())
 
 
           <div class="card mb-3">
-            <a href="act_details.php">
+            <a href="act_details.php?temp_activity_id=<?php echo $my_activities_id [1]; ?>">
               <img class="card-img-top" src="img/<?php echo "$my_activities_photos[1]" ?>" alt="Card image cap">
               <?php
                 $_SESSION['temp_activity_id'] = $my_activities_id [1];
@@ -262,66 +262,47 @@ while ($donnees = $rep->fetch())
           </div>
 
           <div class="card mb-3">
-            <form action='act_details.php' method='post'>
-              <input type="submit" name='activity_nb_3'/>
-                  <img class="card-img-top" src="img/<?php echo "$my_activities_photos[2]" ?>" alt="Card image cap">
-              </input>
-            </form>
-            <?php
-              if(isset($_POST['activity_nb_3']))
-              {
-                  echo "ok";
-                  $_SESSION['temp_activity_id'] = $my_activities_id [2];
-              }
-            ?>
+            <a href="act_details.php?temp_activity_id=<?php echo $my_activities_id [2]; ?>">
+              <img class="card-img-top" src="img/<?php echo "$my_activities_photos[2]" ?>" alt="Card image cap">
+              <?php
+                $_SESSION['temp_activity_id'] = $my_activities_id [2];
+              ?>
+            </a>
             <div class="card-body">
               <h5 class="card-title"><?php echo "$my_activities_title[2]" ?></h5>
               <p class="card-text"></p>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
+
           </div>
         </div>
         <div class="card-deck wow zoomIn">
 
           <div class="card mb-3">
-            <form action='act_details.php' method='post'>
-              <input type="submit" name='activity_nb_4'/>
-                  <img class="card-img-top" src="img/<?php echo "$my_activities_photos[3]" ?>" alt="Card image cap">
-              </input>
-            </form>
-            <?php
-              if(isset($_POST['activity_nb_4']))
-              {
-                  echo "ok";
-                  $_SESSION['temp_activity_id'] = $my_activities_id [3];
-              }
-            ?>
+            <a <a href="act_details.php?temp_activity_id=<?php echo $my_activities_id [3]; ?>">
+              <img class="card-img-top" src="img/<?php echo "$my_activities_photos[3]" ?>" alt="Card image cap">
+              <?php
+                $_SESSION['temp_activity_id'] = $my_activities_id [3];
+              ?>
+            </a>
             <div class="card-body">
               <h5 class="card-title"><?php echo "$my_activities_title[3]" ?></h5>
               <p class="card-text"></p>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
+
           </div>
 
           <div class="card mb-3">
-            <form action='act_details.php' method='post'>
-              <input type="submit" name='activity_nb_5'/>
-                  <img class="card-img-top" src="img/<?php echo "$my_activities_photos[4]" ?>" alt="Card image cap">
-              </input>
-            </form>
-            <?php
-              if(isset($_POST['activity_nb_5']))
-              {
-                  echo "ok";
-                  $_SESSION['temp_activity_id'] = $my_activities_id [4];
-              }
-            ?>
-
+            <a href="act_details.php?temp_activity_id=<?php echo $my_activities_id [4]; ?>">
+              <img class="card-img-top" src="img/<?php echo "$my_activities_photos[4]" ?>" alt="Card image cap">
+            </a>
             <div class="card-body">
               <h5 class="card-title"><?php echo "$my_activities_title[4]" ?></h5>
               <p class="card-text"></p>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
+
           </div>
 
         </div>

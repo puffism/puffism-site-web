@@ -67,7 +67,7 @@ session_start();
         ?>
           <div class="col offset-6" style="margin-left:850px">
             <a href="profile.php">
-              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px">
+              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px" class="img-fluid">
             </a>
             <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
@@ -83,6 +83,7 @@ session_start();
           }
         ?>
       </ul>
+
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -91,13 +92,45 @@ session_start();
   </nav>
 
   <br><br>
-
   <div class="container">
-
-
-
+    <div class="card mb-3 bg-light shadow wow fadeIn">
+      <div class="card-body">
+        <h5 class="card-title">Services</h5>
+        <p class="card-text text-justify">
+          Puffism est donc une plateforme de mise en relation selon différents critères et affinités de touristes et de
+          guides locaux qui ont soif de rencontres uniques avec différentes cultures. Cette plateforme prend donc la
+          forme
+          d’un site internet à la portée de tous sur lequel les guides peuvent se présenter et proposer un panel
+          d’activités
+          uniques aux touristes.<br><br>
+          Touristes et guides locaux sont donc amenés à créer un compte de manière rapide et gratuite avec leurs
+          coordonnées
+          qui seront utilisées pour la mise en relation. Les activités proposées par les guides seront classées par
+          destination sur le site, avec leur description, leur durée ainsi que le nombre de personne auquel elles sont
+          ouvertes. <br><br>
+          Pour une expérience plus personnalisée, des guides dont les centres d’intérêts sont en adéquation avec le
+          touriste
+          pourront être suggérés de façon à affiner la recherche.<br><br>
+          Notre projet est basé sur le partage, nous encourageons chaque utilisateur à être à la fois touriste, mais aussi
+          guide dans son pays. Ainsi, nous pourrions à l’avenir mettre en place une monnaie d’échange que l’on pourrait
+          gagner en tant que guide et dépenser en tant que touriste. Bien sûr pour les personnes qui ne souhaiteraient
+          pas
+          être guide nous pourrions proposer d’acheter cette monnaie en argent réel. Ce système économique nous
+          permettrait
+          également de générer des profits tout en proposant un système totalement gratuit. En effet, un site payant
+          freinerait sûrement une grande partie de notre cible. <br><br>
+          Dans cette expérience, nous serons bien sûr les premiers utilisateurs à proposer sur le site nos propres
+          activités qui permettront de faire découvrir le fonctionnement de notre plateforme. Les premiers retours dont nous
+          avons eux étaient positifs et les utilisateurs étaient prêtes à s’inscrire sur le site en tant que guide dans leur
+          pays.
+        </p>
+      </div>
+      <footer class="card-footer text-justify">Need more information? <a href="contact.html"> Contact us</a><br>
+        Want to start creating your adventure? <a href="join.html">Join as tourist</a><br>
+        Want to start sharing your experience? <a href="join.html">Join as local guide</a>
+      </footer>
+    </div>
   </div>
-
   <hr>
 
   <section>

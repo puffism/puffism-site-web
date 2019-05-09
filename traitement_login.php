@@ -37,8 +37,12 @@
 
 				//récuperation de la photo de profile
 				$_SESSION['image_user_id'] = $donnees['image_user_id'];
-
-				header('Location: profile.php');
+				if ($_SESSION['user_privilege']=='Local guide') {
+					header('Location: profile.php');
+				}
+				else {
+					header('Location: profile_t.php');
+				}
 			}
 		}
 	}

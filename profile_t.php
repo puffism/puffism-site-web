@@ -29,26 +29,54 @@ while ($donnees = $rep->fetch())
   }
 
 }
+$my_reservation_activity = array();
+$my_reservation_datetime = array();
 
-$rep_2 = $bdd->query('SELECT * FROM activity');
-
+$rep_2 = $bdd->query('SELECT * FROM reservation');
+//je parcours ma table de reservation
+while ($donnees = $rep_2->fetch())
+{
+  //si l'id du compte connecté est le même que le celui de la réservation actuelle
+  if ($_SESSION['user_id'] == $donnees['user_id'] ) {
+    //je remplis mon array d'id d'activités
+    $my_reservation_activity [] = $donnees ['activity_id'];
+    $my_reservation_datetime [] = $donnees ['reservation_date_time'];
+  }
+}
+$my_activities_users = array();
 $my_activities_photos = array();
 $my_activities_title = array();
 $my_activities_description = array();
 
-//je parcours ma table activities
-while ($donnees = $rep_2->fetch())
+$rep_3 = $bdd->query('SELECT * FROM activity');
+//je parcours ma table d'activité
+while ($donnees = $rep_3->fetch())
 {
-  //si l'id du compte connecté est le même que le celui du propriétaire de l'activité
-  if ($_SESSION['user_id'] == $donnees['user_id'] ) {
+  //si l'id de l'activité actuelle est égale à celle stockée
+  if ($my_reservation_activity[0] == $donnees['activity_id'] ) {
     //je remplis mon array d'id d'activités
+    $my_activities_users [] = $donnees ['user_id'];
     $my_activities_photos [] = $donnees ['activity_photo'];
     $my_activities_title [] = $donnees ['activity_title'];
     $my_activities_description [] = $donnees['activity_description'];
   }
-
 }
+$guide_phone = array();
+$guide_first_name = array();
+$guide_last_name = array();
 
+$rep_4 = $bdd->query('SELECT * FROM user');
+//je parcours ma table d'activité
+while ($donnees = $rep_4->fetch())
+{
+  //si l'id de l'activité actuelle est égale à celle stockée
+  if ($my_activities_users[0] == $donnees['user_id'] ) {
+    //je récupère son nom et son numéro de téléphone
+    $guide_phone [] = $donnees ['user_phone'];
+    $guide_last_name [] = $donnees ['user_last_name'];
+    $guide_first_name [] = $donnees ['user_first_name'];
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -101,10 +129,18 @@ while ($donnees = $rep_2->fetch())
         <li class="nav-item">
           <a class="nav-link" href="contact.php">Contact</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="join.php">Join</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="login.php">Login</a>
+        </li>
       </ul>
 
       <div class="col offset-6" style="margin-left:850px">
-        <a href="">
+        <a href="profile.php">
           <img src="/img/icons/user.png" alt="user" width="20px" height="20px" class="img-fluid">
         </a>
         <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
@@ -113,7 +149,7 @@ while ($donnees = $rep_2->fetch())
         </button>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="profile.php">My profile</a>
-          <a class="dropdown-item" href="#">Activites</a>
+          <a class="dropdown-item" href="#">Activities</a>
           <a class="dropdown-item" href="log_out.php">Log out</a>
         </div>
       </div>
@@ -136,13 +172,14 @@ while ($donnees = $rep_2->fetch())
             <h5>Personal Info</h5>
           </div>
           <div class="card-body">
-            <img src="img/icons/<?php echo $avatar ?>" width="200px" height="200px" class="img-fluid rounded mx-auto d-block" />
+            <img src="img/icons/<?php echo $avatar ?>" width="200px" height="200px"
+              class="img-fluid rounded mx-auto d-block">
 
             <br>
             <div class="px-6 py-2">
               <div class="input-group mb-3 col-8 mx-auto d-block">
                 <div class="form-group">
-                  <label for="exampleFormControlInput1">First name</label>
+                  <label>First name</label>
                   <br>
                   <strong>
                   <?php
@@ -155,7 +192,7 @@ while ($donnees = $rep_2->fetch())
 
               <div class="input-group mb-3 col-8 mx-auto d-block">
                 <div class="form-group">
-                  <label for="exampleFormControlInput1">Last name</label>
+                  <label>Last name</label>
                   <br>
                   <strong>
                   <?php
@@ -168,7 +205,7 @@ while ($donnees = $rep_2->fetch())
 
               <div class="input-group mb-3 col-8 mx-auto d-block">
                 <div class="form-group">
-                  <label for="exampleFormControlInput1">Gender</label>
+                  <label>Gender</label>
                   <br>
                   <strong>
                   <?php
@@ -182,7 +219,7 @@ while ($donnees = $rep_2->fetch())
 
             <div class="input-group mb-3 col-8 mx-auto d-block">
               <div class="form-group">
-                <label for="exampleFormControlInput1">Phone number</label>
+                <label>Phone number</label>
                 <br>
                 <strong>
                 <?php
@@ -196,7 +233,7 @@ while ($donnees = $rep_2->fetch())
 
             <div class="input-group mb-3 col-8 mx-auto d-block">
               <div class="form-group">
-                <label for="exampleFormControlInput1">Email address</label>
+                <label>Email address</label>
                 <br>
                 <strong>
                 <?php
@@ -210,7 +247,7 @@ while ($donnees = $rep_2->fetch())
 
             <div class="input-group mb-3 col-8 mx-auto d-block">
               <div class="form-group">
-                <label for="exampleFormControlInput1">Password</label>
+                <label>Password</label>
                 <br>
                 <strong>
                 <?php
@@ -224,7 +261,7 @@ while ($donnees = $rep_2->fetch())
 
             <div class="input-group mb-3 col-8 mx-auto d-block">
               <div class="form-group">
-                <label for="exampleFormControlInput1">Status</label>
+                <label>Status</label>
                 <br>
                 <strong>
                 <?php
@@ -250,32 +287,53 @@ while ($donnees = $rep_2->fetch())
       <div class="col-7">
         <div class="card mx-auto shadow-lg">
           <div class="card-header text-center">
-            <h5>My Activities</h5>
+            <h5>My Reservations</h5>
           </div>
         </div>
         <br>
         <div class="card mx-auto shadow-lg">
           <div class="card-body">
-          <h4><?php echo "$my_activities_title[0]" ?></h4>
-          <img src="img/<?php echo "$my_activities_photos[0]" ?>" width="500px" class="img-fluid rounded d-block">
 
-          <br>
-          <div class="px-6 py-2">
-            <div class="input-group mb-3 col-8 d-block">
-              <div class="form-group">
-                <label for="exampleFormControlInput1"><b>Description: </b><?php echo "$my_activities_description[0]" ?></label>
+            <div class="row">
+
+              <div class="col-6">
+                <h4><?php echo "$my_activities_title[0]" ?></h4>
+                <br>
+                <a href="act_details.php">
+                  <img class="img-fluid card-img-top rounded d-block" src="img/<?php echo "$my_activities_photos[0]" ?>">
+                </a>
+                <br>
+                <div>
+                  <p><b>Date of reservation:</b> <?php echo "$my_reservation_datetime[0]" ?></p>
+                </div>
+                <div>
+                  <p><b>Contacter le guide:</b> <?php echo "$guide_first_name[0] $guide_last_name[0] au $guide_phone[0]" ?></p>
+                </div>
+              </div>
+
+              <div class="col">
+                <br>
+                <br>
+
+                <p class="text-left">
+                  <b>Description: </b><?php echo "$my_activities_description[0]" ?>
+                  <br>
+                  <!--Write description here-->
+                </p>
               </div>
             </div>
+          </div>
 
-            <div class="input-group mb-3 col-8 d-block">
-            </div>
-          </div>
+          <p class="card-text text-right px-3"><small class="text-muted">Last updated 3 mins ago</small></p>
+
           <br>
-          </div>
+
+
         </div>
       </div>
     </div>
   </div>
+
 
 
   <br>

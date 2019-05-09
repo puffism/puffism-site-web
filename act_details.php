@@ -13,19 +13,21 @@ catch (Exception $e)
  	die('Erreur : ' . $e->getMessage());
 }
 
+
+
 $rep = $bdd->query('SELECT * FROM activity');
 //je parcours ma table activity
 while ($donnees = $rep->fetch())
 {
   //je récupère les informations de l'activité
-  if($_SESSION['temp_activity_id'] == $donnees ['activity_id']){
+  if($_GET['temp_activity_id'] == $donnees ['activity_id']){
 
     $temp_activity_photo = $donnees ['activity_photo'];
     $temp_activity_title = $donnees ['activity_title'];
     $temp_activity_description = $donnees['activity_description'];
-    $temp_activity_category = ['activity_category'];
-    $temp_activity_city = ['activity_city'];
-    $temp_activity_country = ['activity_country'];
+    $temp_activity_category = $donnees ['activity_category'];
+    $temp_activity_city = $donnees ['activity_city'];
+    $temp_activity_country = $donnees ['activity_country'];
 
   }
 
@@ -101,7 +103,7 @@ while ($donnees = $rep->fetch())
         ?>
           <div class="col offset-6" style="margin-left:850px">
             <a href="profile.php">
-              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px">
+              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px" class="img-fluid">
             </a>
             <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
@@ -184,7 +186,7 @@ while ($donnees = $rep->fetch())
 
               <div class="col-6">
                 <a href="act_details.php">
-                  <img class="card-img-top rounded d-block" src="img/<?php echo "$temp_activity_photo" ?>" alt="Card image cap">
+                  <img class="img-fluid card-img-top rounded d-block" src="img/<?php echo "$temp_activity_photo" ?>" alt="Card image cap">
                 </a>
                 <br>
                 <div>
@@ -205,20 +207,26 @@ while ($donnees = $rep->fetch())
             </div>
 
             <p class="card-text text-right"><small class="text-muted">Last updated 3 mins ago</small></p>
-
-
             <br>
+            <?php
+              if(isset($_SESSION['user_id']))
+              { // Si l'utilisateur est connecté on lui affiche le bouton "add to reservations"
+            ?>
+              <div class="text-center">
+                <form action="traitement_reservations.php">
+                  <button class="btn btn-primary" type="submit"> Add to Reservations</button>
+                </form>
+              </div>
+            <?php
+              }
+            ?>
 
           </div>
         </div>
-
         <br>
-
       </div>
-
+      </div>
     </div>
-
-  </div>
 
   <br>
 

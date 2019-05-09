@@ -67,7 +67,7 @@ session_start();
         ?>
           <div class="col offset-6" style="margin-left:850px">
             <a href="profile.php">
-              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px">
+              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px" class="img-fluid">
             </a>
             <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
@@ -149,12 +149,13 @@ session_start();
                   <div class="card-body">
                     <p class="card-text text-light">
                       Nous sommes tous étudiants à l’ECE Paris-Lyon, nous sommes une équipe multiculturelle, dynamique
-                      et motivé dans l’accomplissement non pas d’un simple projet, mais d’une épopée humaine.<br>
+                      et motivée dans l’accomplissement non pas d’un simple projet, mais d’une épopée humaine.<br>
                       Notre rêve
                       ?<br>
-                      Que notre plateforme permette à des millions de puffins de découvrir les réelles nuances du monde
-                      qui nous entoure, la véritable culture de locaux passionné par le partage.<br>
-                      Merci de nous soutenir, liker, partager commenter, pour que cette aventure devienne aussi la
+                      Que notre plateforme permette à des millions de d'utilisateurs (puffins) de découvrir les réelles
+                      nuances du monde
+                      qui nous entoure et la culture des locaux passionnés par le partage.<br>
+                      Merci de nous soutenir, liker, partager et commenter, pour que cette aventure devienne aussi la
                       vôtre.
                     </p>
                     <a href="https://www.facebook.com/puffism/">

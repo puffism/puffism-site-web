@@ -80,7 +80,7 @@
           <div class="card-body">
 
             <img src="img/puffism_logo.png" width="200px" height="200px"
-              class="rounded mx-auto d-block animated rotateIn">
+              class="img-fluid rounded mx-auto d-block animated rotateIn">
 
             <br>
 
@@ -158,7 +158,7 @@
 
 
             <img src="img/puffism_logo.png" width="200px" height="200px"
-              class="rounded mx-auto d-block animated rotateIn">
+              class="img-fluid rounded mx-auto d-block animated rotateIn">
 
             <br>
             <div class="row">

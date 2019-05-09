@@ -79,7 +79,7 @@ session_start();
           ?>
             <div class="col offset-6" style="margin-left:850px">
               <a href="profile.php">
-                <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px">
+                <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px" class="img-fluid">
               </a>
               <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
@@ -117,7 +117,7 @@ session_start();
       <div class="row">
         <div class="card-group bg-light mx-auto rounded">
           <div class="card-mb-3">
-            <img src="img/puffism_logo.png" width="200px" class="rounded mx-auto d-block animated rotateIn">
+            <img src="img/puffism_logo.png" width="200px" class="img-fluid rounded mx-auto d-block animated rotateIn">
           </div>
 
           <div class="card bg-light">
@@ -171,7 +171,7 @@ session_start();
       </div>
       <div class="col-5">
         <div class="card mb-3 bg-light wow zoomIn">
-          <img class="card-img-top rounded" src="img/tourists.jpg">
+          <img class="img-fluid card-img-top rounded" src="img/tourists.jpg">
         </div>
       </div>
     </div>
@@ -184,7 +184,7 @@ session_start();
     <div class="row">
       <div class="col-5">
         <div class="card mb-3 bg-light shadow wow zoomIn">
-          <img class="card-img-top rounded" src="img/tourist_and_locals.jpg">
+          <img class="img-fluid card-img-top rounded" src="img/tourist_and_locals.jpg">
         </div>
       </div>
       <div class="col">
