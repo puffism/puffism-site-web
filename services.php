@@ -18,7 +18,7 @@ session_start();
   <link rel="icon" href="img/puffism_logo.png">
 </head>
 
-<body style="background-color:rgb(114, 198, 236);">
+<body style="background: -webkit-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(240, 229, 81, 0.69) 100%);">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
     <a class=navbar-brand href="index.php">
@@ -131,6 +131,7 @@ session_start();
       </footer>
     </div>
   </div>
+  <br><br><br><br><br>
   <hr>
 
   <section>

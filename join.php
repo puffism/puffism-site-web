@@ -17,7 +17,7 @@
 </head>
 
 
-<body style="background-color:rgb(114, 198, 236);">
+<body style="background: -webkit-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(240, 229, 81, 0.69) 100%);">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
     <a class="navbar-brand" href="index.php">
@@ -72,7 +72,7 @@
 
     <div class="row">
 
-      <div class="col mb-3">
+    <div class="col mb-3 mx-auto">
         <div class="card mx-auto shadow-lg" style="max-width: 25rem; max-height: 50rem">
           <div class="card-header text-center">
             <h5>Join as a tourist</h5>
@@ -235,10 +235,23 @@
 
   </div>
 
+  <hr>
+
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="card mb-3 bg-dark">
+          <div class="copyright-info">
+            <h5 class="my-auto text-center text-white">
+              2018-<script type="text/JavaScript">document.write(new Date().getFullYear());</script> © Puffism
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <br>
-
+</section>
 
   <!--Optionnel JavaScript-->
   <!--Ces scripts sont necessaire pour ajouter jQuery, Popper.js et JavaScript a bootstrap-->
@@ -259,14 +272,3 @@
 </body>
 
 </html>
-
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>-->
-
-<!--      <div class="form-group mb-3 col mx-auto d-block">
-          <label for="exampleFormControlInput1">First name</label>
-        <input type="text" class="form-control" placeholder="First name" aria-label="First name"
-          aria-describedby="basic-addon1">
-      </div>
-    -->

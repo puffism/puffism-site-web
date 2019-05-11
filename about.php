@@ -18,7 +18,7 @@ session_start();
   <link rel="icon" href="img/puffism_logo.png">
 </head>
 
-<body style="background-color:rgb(114, 198, 236);">
+<body style="background: -webkit-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(240, 229, 81, 0.69) 100%);">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
     <a class=navbar-brand href="index.php">
@@ -66,7 +66,7 @@ session_start();
           {
         ?>
           <div class="col offset-6" style="margin-left:850px">
-            <a href="profile.php">
+            <a href="profile.php" style="text-decoration: none">
               <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px" class="img-fluid">
             </a>
             <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
@@ -166,12 +166,12 @@ session_start();
                     </a>
                     <br>
                     <p class="card-text text-light">
-                      <b>Benjamin Tan</b> : PDG de Puffism, développeur.<br>
-                      <b>Simon Zhang</b> : Responsable médiation, développeur.<br>
-                      <b>Noor Kardache</b> : Directrice marketing.<br>
-                      <b>Ilan Saidi</b> : Directeur communication.<br>
-                      <b>Quentin Lanot</b> : Directeur ressources humaines.<br>
-                      <b>Valentin Genter</b> : Assistant ressources humaines.
+                    <b>Benjamin Tan</b> : PDG de Puffism, développeur<br>
+                      <b>Simon Zhang</b> : Responsable médiation, développeur<br>
+                      <b>Noor Kardache</b> : Directrice marketing<br>
+                      <b>Ilan Saidi</b> : Directeur communication<br>
+                      <b>Quentin Lanot</b> : Directeur ressources humaines<br>
+                      <b>Valentin Genter</b> : Assistant ressources humaines
                     </p>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ session_start();
 
   </div>
 
-  <br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br>
 
   <hr>
 

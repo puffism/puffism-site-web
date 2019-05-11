@@ -70,7 +70,7 @@ while ($donnees = $rep_2->fetch())
 </head>
 
 
-<body style="background-color:rgb(114, 198, 236);">
+<body style="background: -webkit-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(240, 229, 81, 0.69) 100%);">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
     <a class="navbar-brand" href="index.php">
@@ -104,8 +104,8 @@ while ($donnees = $rep_2->fetch())
       </ul>
 
       <div class="col offset-6" style="margin-left:850px">
-        <a href="">
-          <img src="/img/icons/user.png" alt="user" width="20px" height="20px" class="img-fluid">
+        <a href="profile.php">
+          <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px" class="img-fluid">
         </a>
         <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
@@ -256,6 +256,7 @@ while ($donnees = $rep_2->fetch())
         <br>
         <div class="card mx-auto shadow-lg">
           <div class="card-body">
+            
           <h4><?php echo "$my_activities_title[0]" ?></h4>
           <img src="img/<?php echo "$my_activities_photos[0]" ?>" width="500px" class="img-fluid rounded d-block">
 

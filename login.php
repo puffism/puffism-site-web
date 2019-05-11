@@ -2,7 +2,6 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <!--<link rel="stylesheet" href="styles.css">-->
   <meta charset="utf-8">
   <!-- Meta tag necessaire pour adapter a mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,9 +17,9 @@
 </head>
 
 
-<body style="background-color:rgb(114, 198, 236);">
+<body style="background: -webkit-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(240, 229, 81, 0.69) 100%);">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
     <a class="navbar-brand" href="index.php">
       <h2>Puffism</h2>
     </a>
@@ -69,12 +68,13 @@
 
   <br>
 
-  <div class="card mx-auto" style="max-width: 25rem; max-height: 50rem">
+  <div class="card mx-auto shadow-lg" style="max-width: 25rem; max-height: 50rem">
     <div class="card-header text-center">
       <h5>Login</h5>
     </div>
     <div class="card-body">
-      <img src="img/puffism_logo.png" width="200px" height="200px" class="img-fluid rounded mx-auto d-block animated rotateIn">
+      <img src="img/puffism_logo.png" width="200px" height="200px"
+      class="img-fluid rounded mx-auto d-block animated rotateIn">
 
       <br>
 
@@ -92,9 +92,6 @@
           <input type="password" class="form-control"name="user_password" placeholder="Password" aria-label="Password">
         </div>
 
-        <div class="input" style="text-align:center">
-          <input type="checkbox" class="form-check-input" id="dropdownCheck"> Keep me signed in
-        </div>
         <br>
 
         <div class="text-center mx-auto">
@@ -118,7 +115,27 @@
 
   </div>
 
-  <br>
+  <br> <br> <br> <br> <br> <br> <br>
+
+  <hr>
+
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <div class="card mb-3 bg-dark">
+            <div class="copyright-info">
+              <h5 class="my-auto text-center text-white">
+                2018-<script type="text/JavaScript">document.write(new Date().getFullYear());</script> © Puffism
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 
 
   <!--Optionnel JavaScript-->
@@ -126,12 +143,8 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
   <!--Script pour ajouter des animations stylees-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <!--Script pour initialiser les aninmaitons de "fade"-->
@@ -142,35 +155,7 @@
 </body>
 
 </html>
-
-
-
-<!--
-    <form class="px-4 py-3">
-        <div class="form-group">
-          <label for="exampleDropdownFormEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+<!--        <div class="input" style="text-align:center">
+          <input type="checkbox" class="form-check-input" id="keepMeS"> <label for="keepMeS">Keep me signed in</label>
         </div>
-        <div class="form-group">
-          <label for="exampleDropdownFormPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-        </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="dropdownCheck">
-          <label class="form-check-label" for="dropdownCheck">
-            Remember me
-          </label>
-        </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
-      </form>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">New around here? Sign up</a>
-      <a class="dropdown-item" href="#">Forgot password?</a>
-    -->
-<!--
-    <form action="/action_page.php">
-CALL SIMON
-      <button type="submit" class="btn btn-primary">
-          Login<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span></button>
-    </form>
-    -->
+      -->
