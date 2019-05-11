@@ -60,7 +60,7 @@
 
       <div class="col offset-6" style="margin-left:850px">
         <a href="profile.html">
-          <img src="/img/icons/user.png" alt="user" width="20px" height="20px" class="img-fluid">
+          <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px" class="img-fluid">
         </a>
         <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
@@ -100,7 +100,7 @@
 
             <br>
 
-            <form class="px-4 py-3">
+            <form class="px-4 py-3" form class="px-4 py-3" action="traitement_join.php" method="post">
 
               <div class="input-group mb-3 col mx-auto">
                 <input type="text" class="form-control" placeholder="First name" aria-label="First name">
@@ -123,23 +123,33 @@
                 <div class="input-group-prepend">
                   <label class="input-group-text" for="inputGroupSelect01">Gender</label>
                 </div>
-                <select class="custom-select" id="inputGroupSelect01">
+                <select class="custom-select" name="user_gender" id="inputGroupSelect01">
                   <option selected>Choose...</option>
-                  <option value="1">Male</option>
-                  <option value="2">Female</option>
-                  <option value="3">Other</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
               <br>
 
               <div class="input-group mb-3 col mx-auto">
+<<<<<<< HEAD
+                <input type="password" class="form-control" name="user_password" placeholder="Password" aria-label="Password"
+                  aria-describedby="basic-addon1">
+              </div>
+
+              <div class="input-group mb-3 col mx-auto">
+                <input type="password" class="form-control" name="validate_password" placeholder="Re-enter password"
+                  aria-label="Re-enter password" aria-describedby="basic-addon1">
+=======
                 <input type="password" class="form-control" placeholder="Password" aria-label="Password">
               </div>
 
               <div class="input-group mb-3 col mx-auto">
                 <input type="password" class="form-control" placeholder="Re-enter password"
                   aria-label="Re-enter password">
+>>>>>>> b3a0e94ed3ebd469b07d56f3244363710ca52b81
               </div>
 
               <br>
@@ -150,7 +160,6 @@
                   </button>
                 </form>
               </div>
-
             </form>
           </div>
         </div>
@@ -281,4 +290,15 @@
 
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+<<<<<<< HEAD
   </script>-->
+
+<!--      <div class="form-group mb-3 col mx-auto d-block">
+          <label for="exampleFormControlInput1">First name</label>
+        <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+          aria-describedby="basic-addon1">
+      </div>
+    -->
+=======
+  </script>-->
+>>>>>>> b3a0e94ed3ebd469b07d56f3244363710ca52b81
