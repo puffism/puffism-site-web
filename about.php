@@ -67,7 +67,7 @@ session_start();
         ?>
           <div class="col offset-6" style="margin-left:850px">
             <a href="profile.php" style="text-decoration: none">
-              <img src="/img/icons/profile_default.png" alt="user" width="20px" height="20px" class="img-fluid">
+              <img src="img/icons/profile_default.png" alt="user" width="20px" height="20px" class="img-fluid">
             </a>
             <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
