@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 08 mai 2019 à 18:34
+-- Généré le :  sam. 11 mai 2019 à 20:47
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -42,15 +42,18 @@ CREATE TABLE IF NOT EXISTS `activity` (
   PRIMARY KEY (`activity_id`),
   KEY `user_id_constraint` (`user_id`),
   KEY `image_id` (`image_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `activity`
 --
 
 INSERT INTO `activity` (`activity_id`, `activity_description`, `activity_title`, `activity_category`, `activity_city`, `activity_country`, `activity_photo`, `user_id`, `image_id`) VALUES
-(1, 'Promenade et découverte du jardin du Luxembourg, du Louvre et de l’architecture parisienne', 'Découverte du quartier du Louvre', 'Promenade', 'Paris', 'France', 'quartierdulouvre', 2, NULL),
-(2, 'Découvrir Paris en s\'élançant dans une chasse au trésor effrénée', 'Chasse au trésor', 'Sortir à Paris', 'Paris', 'France', 'chasseautresorparis', 3, NULL);
+(1, 'Promenade et découverte du jardin du Luxembourg, du Louvre et de l’architecture parisienne', 'Découverte du quartier du Louvre', 'Sightseeing & Walks', 'Paris', 'France', 'quartierdulouvre', 2, NULL),
+(2, 'Découvrir Paris en s\'élançant dans une chasse au trésor effrénée', 'Chasse au trésor', 'Fun', 'Paris', 'France', 'chasseautresorparis', 3, NULL),
+(3, 'Le Barathon revient pour fêter son anniversaire ! Un année après son lancement, on ne pouvait pas faire autrement. Plusieurs établissements de Toulon s’associent et vous proposent des tarifs préférentiels tout au long de la soirée de ce samedi 20 octobre. Pour participer, c’est simple : vous achetez votre écocup (2€), récupérez le flyer à faire tamponner dans tous les établissements et vous baladez en profitant des tarifs partenaires.\r\n\r\nDurant toute la soirée, les déplacements sont libres : vous n’avez qu’à choisir votre itinéraire et découvrir chacun des bars partenaires sur votre chemin.\r\n\r\n \r\n\r\nVoici la liste des établissements participants : Joséphine, Le Brun Noir, El Paso, La Cale Sèche, Dany’s Pub, Pub Le Finnians, Bar Le Neptunia, Espit Chupitos, La Tribune, Le Corsaire, le Globe Trotteur (capacité d’accueil limitée) et Art & Brunch (capacité d’accueil limitée).\r\n\r\nL’organisateur tient toutefois à rappeler certains points :\r\n– L’abus d’alcool est dangereux pour la santé\r\n– Il s’agit d’un événement privé. Ce n’est pas un appel à rassemblement sur l’espace public.\r\n– Les établissements ouvrent et ferment à leurs horaires habituels. Merci de les respecter. De plus, respectez le voisinage pour qu’aucun établissement n’ait à subir des conséquences. Nous ne pouvons être tenus responsables de vos actes.', 'Barathon', 'Fun', 'Toulon', 'France', 'Barathon', 1, NULL),
+(4, 'Rencontrez notre guide Benjamin autour de dégustations de spécialités franco-coréennes afin de découvrir l\'apport de l\'influence de la gastronomie française sur la gastronomie coréenne ', 'Dégustation de pâtisseries franco-coréennes', 'Gastronomy', 'Paris', 'France', 'plus82', 5, NULL),
+(5, 'Découvrir l\'ambiance des matchs français avec Quentin qui vous fera passer un moment inoubliable autour d\'événements sportifs.', 'Assister à un match au célèbre parc des Princes', 'Sports', 'Paris', 'France', 'parcdesprinces', 4, NULL);
 
 -- --------------------------------------------------------
 
@@ -63,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `image` (
   `image_id` int(11) NOT NULL AUTO_INCREMENT,
   `image_name` varchar(100) NOT NULL DEFAULT 'profile_default',
   PRIMARY KEY (`image_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `image`
@@ -87,7 +90,16 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   PRIMARY KEY (`reservation_id`),
   KEY `activity_id` (`activity_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `reservation`
+--
+
+INSERT INTO `reservation` (`reservation_id`, `activity_id`, `reservation_date_time`, `user_id`) VALUES
+(1, 4, '2019-05-10 10:34:09', 9),
+(2, 4, '2019-05-10 10:34:09', 13),
+(3, 4, '2019-05-10 10:34:09', 14);
 
 -- --------------------------------------------------------
 
@@ -108,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `image_user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`user_id`),
   KEY `user_image_avatar` (`image_user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `user`
@@ -125,7 +137,9 @@ INSERT INTO `user` (`user_id`, `user_first_name`, `user_last_name`, `user_gender
 (8, 'Souad', 'El-sayed', 'Female', 'elsayed.sou@gmail.com', 'sousou89', '0120563594', 'tourist', 1),
 (9, 'Colin', 'Ferret', 'Male', 'ferret.colin@gmail.com', 'coline56', '0120563594', 'tourist', 1),
 (11, 'Oscar', 'Marze', 'Other', 'oscar@marze.org', 'oscarou.com', '0632304199', 'tourist', 1),
-(12, 'Hélène ', 'Zhang', 'Male', 'helenezhang98@hotmail.com', '0000', '222222323', 'tourist', 1);
+(12, 'Hélène ', 'Zhang', 'Male', 'helenezhang98@hotmail.com', '0000', '222222323', 'tourist', 1),
+(13, 'test', 'test', 'Male', 'test@test.com', 'test', '0611072045', 'tourist', 1),
+(14, 'test1', 'test1', 'Male', 'tes1@test1.com', 'test1', '0611072045', 'tourist', 1);
 
 --
 -- Contraintes pour les tables déchargées
